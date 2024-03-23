@@ -23,7 +23,7 @@ export default async function RootLayout({
       <body className="dark:bg-[#1A1C29] bg-white">
         <Navbar navBarData={navBarData.result} />
         <div className="mt-20">{children}</div>
-        <Footer />
+        <Footer navBarData={navBarData.result} />
       </body>
     </html>
   );

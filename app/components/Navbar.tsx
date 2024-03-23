@@ -3,6 +3,9 @@ import { Fragment, useState, useEffect, useRef } from "react";
 import { Dialog, Popover, Tab, Transition, Menu } from "@headlessui/react";
 import { urlFor } from "@/lib/client";
 import logo from "../../public/new-lyf-logo.webp";
+import linkedIn from "../../public/images/linkedin.svg";
+import insta from "../../public/images/insta2.svg";
+
 import {
   Bars3Icon,
   MagnifyingGlassIcon,
@@ -10,128 +13,25 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
+import { navbar } from "@material-tailwind/react";
+
+const ChevronDownIcon = () => (
+  <svg
+    className="h-5 w-5"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 20 20"
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <path
+      fillRule="evenodd"
+      d="M5.293 7.293a1 1 0 0 1 1.414 0L10 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
 
 const navigation = {
-  categories: [
-    {
-      id: "women",
-      name: "Women",
-      featured: [
-        {
-          name: "New Arrivals",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg",
-          imageAlt:
-            "Models sitting back to back, wearing Basic Tee in black and bone.",
-        },
-        {
-          name: "Basic Tees",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg",
-          imageAlt:
-            "Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.",
-        },
-      ],
-      sections: [
-        {
-          id: "clothing",
-          name: "Clothing",
-          items: [
-            { name: "Tops", href: "#" },
-            { name: "Dresses", href: "#" },
-            { name: "Pants", href: "#" },
-            { name: "Denim", href: "#" },
-            { name: "Sweaters", href: "#" },
-            { name: "T-Shirts", href: "#" },
-            { name: "Jackets", href: "#" },
-            { name: "Activewear", href: "#" },
-            { name: "Browse All", href: "#" },
-          ],
-        },
-        {
-          id: "accessories",
-          name: "Accessories",
-          items: [
-            { name: "Watches", href: "#" },
-            { name: "Wallets", href: "#" },
-            { name: "Bags", href: "#" },
-            { name: "Sunglasses", href: "#" },
-            { name: "Hats", href: "#" },
-            { name: "Belts", href: "#" },
-          ],
-        },
-        {
-          id: "brands",
-          name: "Brands",
-          items: [
-            { name: "Full Nelson", href: "#" },
-            { name: "My Way", href: "#" },
-            { name: "Re-Arranged", href: "#" },
-            { name: "Counterfeit", href: "#" },
-            { name: "Significant Other", href: "#" },
-          ],
-        },
-      ],
-    },
-    {
-      id: "men",
-      name: "Men",
-      featured: [],
-      sections: [
-        {
-          id: "clothing",
-          name: "Clothing",
-          items: [
-            { name: "Tops", href: "#" },
-            { name: "Pants", href: "#" },
-            { name: "Sweaters", href: "#" },
-            { name: "T-Shirts", href: "#" },
-            { name: "Jackets", href: "#" },
-            { name: "Activewear", href: "#" },
-            { name: "Browse All", href: "#" },
-            { name: "Tops", href: "#" },
-            { name: "Pants", href: "#" },
-            { name: "Sweaters", href: "#" },
-            { name: "T-Shirts", href: "#" },
-            { name: "Jackets", href: "#" },
-            { name: "Activewear", href: "#" },
-            { name: "Browse All", href: "#" },
-            { name: "Tops", href: "#" },
-            { name: "Pants", href: "#" },
-            { name: "Sweaters", href: "#" },
-            { name: "T-Shirts", href: "#" },
-            { name: "Jackets", href: "#" },
-            { name: "Activewear", href: "#" },
-            { name: "Browse All", href: "#" },
-          ],
-        },
-        {
-          id: "accessories",
-          name: "Accessories",
-          items: [
-            { name: "Watches", href: "#" },
-            { name: "Wallets", href: "#" },
-            { name: "Bags", href: "#" },
-            { name: "Sunglasses", href: "#" },
-            { name: "Hats", href: "#" },
-            { name: "Belts", href: "#" },
-          ],
-        },
-        {
-          id: "brands",
-          name: "Brands",
-          items: [
-            { name: "Re-Arranged", href: "#" },
-            { name: "Counterfeit", href: "#" },
-            { name: "Full Nelson", href: "#" },
-            { name: "My Way", href: "#" },
-          ],
-        },
-      ],
-    },
-  ],
   pages: [
     { name: "Company", href: "#" },
     { name: "Stores", href: "#" },
@@ -148,7 +48,20 @@ type navBarDataType = {
 
 export default function Example({ navBarData }: any) {
   const [open, setOpen] = useState(false);
+  console.log("ssss", navBarData);
   const dropdownRef = useRef(null);
+
+  const [selectedMobileDropdown, setSelectedMobileDropdown] = useState("");
+
+  const selectMobileDropdown = (navbarDataId: any) => {
+    setSelectedMobileDropdown((prevNavbarDataId) => {
+      if (prevNavbarDataId === navbarDataId) {
+        return "";
+      } else {
+        return navbarDataId;
+      }
+    });
+  };
 
   const toggleDropdown = () => {
     setOpen(!open);
@@ -192,138 +105,191 @@ export default function Example({ navBarData }: any) {
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </button>
                 </div>
+                <div
+                  className="ml-4 flex lg:ml-0  mt-4"
+                  onClick={toggleDropdown}
+                >
+                  <Link href="/">
+                    <span className="sr-only mt-10">Your Company</span>
+                    <Image
+                      src={logo}
+                      alt={"Mbbs Admission in Abroad"}
+                      height={80}
+                      width={120}
+                    />
+                  </Link>
+                </div>
+                <div
+                  className="space-y-6 border-t border-gray-200 px-4 pt-8 ml-4"
+                  onClick={toggleDropdown}
+                >
+                  <div key="Home Page" className="flow-root">
+                    <Link
+                      href="/"
+                      className="-m-2 block p-2 font-medium text-gray-900"
+                    >
+                      Home
+                    </Link>
+                  </div>
+                </div>
 
                 {/* Links */}
-                <Tab.Group as="div" className="mt-2">
-                  <div className="border-b border-gray-200">
-                    <Tab.List className="-mb-px flex space-x-8 px-4">
-                      {navigation.categories.map((category) => (
-                        <Tab
-                          key={category.name}
-                          className={({ selected }) =>
-                            classNames(
-                              selected
-                                ? "border-indigo-600 text-indigo-600"
-                                : "border-transparent text-gray-900",
-                              "flex-1 whitespace-nowrap border-b-2 px-1 py-4 text-base font-medium"
-                            )
-                          }
-                        >
-                          {category.name}
-                        </Tab>
-                      ))}
-                    </Tab.List>
-                  </div>
+                <Tab.Group as="div" className="">
                   <Tab.Panels as={Fragment}>
-                    {navigation.categories.map((category) => (
-                      <Tab.Panel
-                        key={category.name}
-                        className="space-y-10 px-4 pb-8 pt-10"
-                      >
-                        <div className="grid grid-cols-2 gap-x-4">
-                          {category.featured.map((item) => (
+                    {navBarData.map((navBar: any) => {
+                      if (navBar.title !== "Footer") {
+                        {
+                          return (
                             <div
-                              key={item.name}
-                              className="group relative text-sm"
+                              key={navBar._id}
+                              className="space-y-4 px-4 pb-2 pt-8 ml-4"
                             >
-                              <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
-                                <img
-                                  src={item.imageSrc}
-                                  alt={item.imageAlt}
-                                  className="object-cover object-center"
-                                />
-                              </div>
-                              <a
-                                href={item.href}
-                                className="mt-6 block font-medium text-gray-900"
+                              <button
+                                type="button"
+                                className="w-full text-left items-center justify-between"
+                                onClick={() => selectMobileDropdown(navBar._id)}
                               >
-                                <span
-                                  className="absolute inset-0 z-10"
-                                  aria-hidden="true"
-                                />
-                                {item.name}
-                              </a>
-                              <p aria-hidden="true" className="mt-1">
-                                Shop now
-                              </p>
-                            </div>
-                          ))}
-                        </div>
-                        {category.sections.map((section) => (
-                          <div key={section.name}>
-                            <p
-                              id={`${category.id}-${section.id}-heading-mobile`}
-                              className="font-medium text-gray-900"
-                            >
-                              {section.name}
-                            </p>
-                            <ul
-                              role="list"
-                              aria-labelledby={`${category.id}-${section.id}-heading-mobile`}
-                              className="mt-6 flex flex-col space-y-6"
-                            >
-                              {section.items.map((item) => (
-                                <li key={item.name} className="flow-root">
-                                  <a
-                                    href={item.href}
-                                    className="-m-2 block p-2 text-gray-500"
+                                <p
+                                  id="heading-mobile"
+                                  className="font-medium text-gray-900 flex items-center"
+                                >
+                                  {navBar.title}
+                                  <div
+                                    className={`${
+                                      selectedMobileDropdown === navBar._id
+                                        ? "transform rotate-180"
+                                        : ""
+                                    } ml-4 font-bold text-gray-500`}
                                   >
-                                    {item.name}
-                                  </a>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </Tab.Panel>
-                    ))}
+                                    <ChevronDownIcon />
+                                  </div>
+                                </p>
+                                {selectedMobileDropdown === navBar._id ? (
+                                  <ul
+                                    role="list"
+                                    aria-labelledby={`${navBar._id}-heading-mobile`}
+                                    className="mt-6 flex flex-col space-y-6"
+                                  >
+                                    {navBar.navItems.map((item: any) => (
+                                      <li
+                                        key={item.title}
+                                        className="flow-root"
+                                        onClick={toggleDropdown}
+                                      >
+                                        <Link
+                                          href={item.slug}
+                                          className="-m-2 p-2 text-gray-500 flex"
+                                        >
+                                          <Image
+                                            src={urlFor(item.image).url()}
+                                            alt=""
+                                            width={50}
+                                            height={30}
+                                            className="block h-auto w-5 flex-shrink-0 mr-5 object-contain"
+                                          />
+                                          {item.title}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                ) : null}
+                              </button>
+                            </div>
+                          );
+                        }
+                      }
+                    })}
                   </Tab.Panels>
                 </Tab.Group>
+                <div
+                  className="space-y-6 px-4 pt-8 ml-4"
+                  onClick={toggleDropdown}
+                >
+                  <div key="ausbildung" className="flow-root">
+                    <Link
+                      href="/ausbildung"
+                      className="-m-2 block p-2 font-medium text-gray-900"
+                    >
+                      Ausbildung
+                    </Link>
+                  </div>
+                </div>
+                <div
+                  className="space-y-6 px-4 pt-8 ml-4"
+                  onClick={toggleDropdown}
+                >
+                  <div key="Learn German" className="flow-root">
+                    <Link
+                      href="/learn-german-language-course-in-bangalore"
+                      className="-m-2 block p-2 font-medium text-gray-900"
+                    >
+                      Learn German
+                    </Link>
+                  </div>
+                </div>
+                <div
+                  className="space-y-6 px-4 pt-8 ml-4"
+                  onClick={toggleDropdown}
+                >
+                  <div key="Blog Page" className="flow-root">
+                    <Link
+                      href="/blog"
+                      className="-m-2 block p-2 font-medium text-gray-900"
+                    >
+                      Blog
+                    </Link>
+                  </div>
+                </div>
+                <div
+                  className="space-y-6 px-4 pt-8 ml-4"
+                  onClick={toggleDropdown}
+                >
+                  <div key="Contact Page" className="flow-root">
+                    <Link
+                      href="/contact"
+                      className="-m-2 block p-2 font-medium text-gray-900"
+                    >
+                      Contact
+                    </Link>
+                  </div>
+                </div>
 
-                <div className="space-y-6 border-t border-gray-200 px-4 py-6">
-                  {navigation.pages.map((page) => (
-                    <div key={page.name} className="flow-root">
-                      <a
-                        href={page.href}
-                        className="-m-2 block p-2 font-medium text-gray-900"
-                      >
-                        {page.name}
-                      </a>
+                {/* Page name for mobile / */}
+
+                <div className="space-y-6 border-t border-gray-200 px-4 py-6 mt-20">
+                  <div className="flow-root">
+                    <p className="-m-2 block p-2 font-medium text-gray-900">
+                      Connect with us on
+                    </p>
+                  </div>
+                  <div className="ml-auto flex items-center">
+                    <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-2">
+                      <p className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                        Connect with us on
+                      </p>
                     </div>
-                  ))}
-                </div>
-
-                <div className="space-y-6 border-t border-gray-200 px-4 py-6">
-                  <div className="flow-root">
-                    <a
-                      href="#"
-                      className="-m-2 block p-2 font-medium text-gray-900"
+                    {/* <a
+                      href="https://github.com/abhinavanand500"
+                      target="_blank"
+                      className="text-sm font-medium text-gray-700 hover:text-gray-800"
                     >
-                      Sign in
+                      <Image src={github} height={60} width={60} alt={""} />
+                    </a> */}
+                    <a
+                      href="https://www.linkedin.com/in/abhinav-a-216a0a110/"
+                      target="_blank"
+                      className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                    >
+                      <Image src={linkedIn} height={60} width={60} alt={""} />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/abhinav_anand_/"
+                      target="_blank"
+                      className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                    >
+                      <Image src={insta} height={60} width={60} alt={""} />
                     </a>
                   </div>
-                  <div className="flow-root">
-                    <a
-                      href="#"
-                      className="-m-2 block p-2 font-medium text-gray-900"
-                    >
-                      Create account
-                    </a>
-                  </div>
-                </div>
-
-                <div className="border-t border-gray-200 px-4 py-6">
-                  <a href="#" className="-m-2 flex items-center p-2">
-                    <img
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
-                      alt=""
-                      className="block h-auto w-5 flex-shrink-0"
-                    />
-                    <span className="ml-3 block text-base font-medium text-gray-900">
-                      CAD
-                    </span>
-                    <span className="sr-only">, change currency</span>
-                  </a>
                 </div>
               </Dialog.Panel>
             </Transition.Child>
@@ -331,6 +297,7 @@ export default function Example({ navBarData }: any) {
         </Dialog>
       </Transition.Root>
 
+      {/* Computer view */}
       <header className="fixed top-0 z-10 w-full bg-white mb-40">
         <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
           info@new-lyf.com
@@ -342,11 +309,11 @@ export default function Example({ navBarData }: any) {
               <button
                 type="button"
                 className=" rounded-md bg-white text-gray-400 lg:hidden"
-                // onClick={toggleDropdown}
+                onClick={toggleDropdown}
               >
                 <span className="absolute -inset-0.5" />
                 <span className="sr-only">Open menu</span>
-                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                <Bars3Icon className="h-6 w-6 ml-4" aria-hidden="true" />
               </button>
 
               {/* Logo */}
@@ -362,7 +329,13 @@ export default function Example({ navBarData }: any) {
                 className="hidden lg:ml-8 lg:block lg:self-stretch z-50 "
                 ref={dropdownRef}
               >
-                <div className="flex h-full space-x-8">
+                <div className="flex h-full space-x-8 ml-4">
+                  <Link
+                    href="/learn-german-language-course-in-bangalore"
+                    className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                  >
+                    Home
+                  </Link>
                   {navBarData.map((navBar: any) => {
                     if (navBar.title !== "Footer") {
                       return (
@@ -426,7 +399,7 @@ export default function Example({ navBarData }: any) {
                                                             alt=""
                                                             width={100}
                                                             height={100}
-                                                            className="block h-auto w-5 flex-shrink-0 mr-5"
+                                                            className="block h-auto w-5 flex-shrink-0 mr-5 object-contain"
                                                           />
                                                           {navItem.title}
                                                         </p>
@@ -449,60 +422,79 @@ export default function Example({ navBarData }: any) {
                       );
                     }
                   })}
+                  <Link
+                    href="/ausbildung"
+                    className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                  >
+                    Ausbildung
+                  </Link>
 
-                  {navigation.pages.map((page) => (
-                    <a
-                      key={page.name}
-                      href={page.href}
-                      className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
-                    >
-                      {page.name}
-                    </a>
-                  ))}
+                  <Link
+                    href="/learn-german-language-course-in-bangalore"
+                    className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                  >
+                    Learn German
+                  </Link>
+
+                  <Link
+                    href="/blog"
+                    className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                  >
+                    Blog
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                  >
+                    Contact
+                  </Link>
                 </div>
               </Popover.Group>
 
               <div className="ml-auto flex items-center">
-                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <a
-                    href="#"
-                    className="text-sm font-medium text-gray-700 hover:text-gray-800"
-                  >
-                    Sign in
-                  </a>
+                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-2">
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <a
-                    href="#"
+                  <p className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                    Connect with me on
+                  </p>
+                  {/* <span className="h-6 w-px bg-gray-200" aria-hidden="true" /> */}
+                  {/* <a
+                    href="https://github.com/abhinavanand500"
+                    target="_blank"
                     className="text-sm font-medium text-gray-700 hover:text-gray-800"
                   >
-                    Create account
+                    <Image
+                      src={github}
+                      height={60}
+                      width={60}
+                      alt="abhinavanand500"
+                    />
+                  </a> */}
+                  <a
+                    href="https://www.linkedin.com/in/abhinav-a-216a0a110/"
+                    target="_blank"
+                    className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                  >
+                    <Image
+                      src={linkedIn}
+                      height={60}
+                      width={60}
+                      alt="abhinav-a-216a0a110"
+                    />
                   </a>
-                </div>
-
-                {/* Search */}
-                <div className="flex lg:ml-6">
-                  <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
-                    <span className="sr-only">Search</span>
-                    <MagnifyingGlassIcon
-                      className="h-6 w-6"
-                      aria-hidden="true"
+                  <a
+                    href="https://www.instagram.com/abhinav_anand_/"
+                    target="_blank"
+                    className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                  >
+                    <Image
+                      src={insta}
+                      height={60}
+                      width={60}
+                      alt="abhinav_anand_"
                     />
                   </a>
                 </div>
-
-                {/* Cart */}
-                {/* <div className="ml-4 flow-root lg:ml-6">
-                  <a href="#" className="group -m-2 flex items-center p-2">
-                    <ShoppingBagIcon
-                      className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
-                      aria-hidden="true"
-                    />
-                    <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
-                      0
-                    </span>
-                    <span className="sr-only">items in cart, view bag</span>
-                  </a>
-                </div> */}
               </div>
             </div>
           </div>

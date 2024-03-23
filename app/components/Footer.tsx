@@ -1,6 +1,18 @@
+import Link from "next/link";
 import React from "react";
 
-const Footer = () => {
+const Footer = ({ navBarData }: any) => {
+  const footerObject = navBarData.find((obj: any) => obj.title === "Footer");
+  const sectionSize = Math.ceil(footerObject.navItems.length / 4);
+
+  // Divide the data into four sections
+  const section1 = footerObject.navItems.slice(0, sectionSize);
+  const section2 = footerObject.navItems.slice(sectionSize, sectionSize * 2);
+  const section3 = footerObject.navItems.slice(
+    sectionSize * 2,
+    sectionSize * 3
+  );
+  const section4 = footerObject.navItems.slice(sectionSize * 3);
   return (
     <div>
       <footer className="text-gray-600 body-font">
@@ -25,114 +37,55 @@ const Footer = () => {
               Air plant banjo lyft occupy retro adaptogen indego
             </p>
           </div>
+
           <div className="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                CATEGORIES
-              </h2>
-              <nav className="list-none mb-10">
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    First Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Second Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Third Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Fourth Link
-                  </a>
-                </li>
-              </nav>
+              {section1.map((obj: any) => (
+                <nav className="list-none mb-4">
+                  <Link
+                    href={obj.slug}
+                    className="text-gray-600 hover:text-gray-800"
+                  >
+                    {obj.title}
+                  </Link>
+                </nav>
+              ))}
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                CATEGORIES
-              </h2>
-              <nav className="list-none mb-10">
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    First Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Second Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Third Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Fourth Link
-                  </a>
-                </li>
-              </nav>
+              {section2.map((obj: any) => (
+                <nav className="list-none mb-4">
+                  <Link
+                    href={obj.slug}
+                    className="text-gray-600 hover:text-gray-800"
+                  >
+                    {obj.title}
+                  </Link>
+                </nav>
+              ))}
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                CATEGORIES
-              </h2>
-              <nav className="list-none mb-10">
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    First Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Second Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Third Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Fourth Link
-                  </a>
-                </li>
-              </nav>
+              {section3.map((obj: any) => (
+                <nav className="list-none mb-4">
+                  <Link
+                    href={obj.slug}
+                    className="text-gray-600 hover:text-gray-800"
+                  >
+                    {obj.title}
+                  </Link>
+                </nav>
+              ))}
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                CATEGORIES
-              </h2>
-              <nav className="list-none mb-10">
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    First Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Second Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Third Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Fourth Link
-                  </a>
-                </li>
-              </nav>
+              {section4.map((obj: any) => (
+                <nav className="list-none mb-4">
+                  <Link
+                    href={obj.slug}
+                    className="text-gray-600 hover:text-gray-800"
+                  >
+                    {obj.title}
+                  </Link>
+                </nav>
+              ))}
             </div>
           </div>
         </div>

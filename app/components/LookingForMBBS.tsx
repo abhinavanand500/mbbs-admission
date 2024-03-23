@@ -7,25 +7,35 @@ import student from "../../public/students.jpeg";
 import student2 from "../../public/student2.jpeg";
 
 const features = [
-  { name: "Free Counselling", description: "Designed by Good Goods, Inc." },
   {
-    name: "Guaranteed Admission in top Universities.",
+    name: "Free Counselling",
     description:
-      "Solid walnut base with rare earth magnets and powder coated steel card cover",
+      "Professional counseling services provided by Good Goods, Inc.",
   },
-  { name: "Low Admission Fees.", description: '6.25" x 3.55" x 1.15"' },
+  {
+    name: "Guaranteed Admission in Top Universities",
+    description:
+      "Exclusive guarantee of admission to prestigious universities. Crafted with a solid walnut base featuring rare earth magnets and a powder-coated steel card cover.",
+  },
+  {
+    name: "Low Admission Fees",
+    description:
+      'Affordable admission fees. Dimensions: 6.25" x 3.55" x 1.15".',
+  },
   {
     name: "100% Visa Clearance Assistance",
-    description: "Hand sanded and finished with natural oil",
+    description:
+      "Comprehensive assistance for obtaining visa clearance. Each item is hand-sanded and finished with natural oil.",
   },
   {
     name: "No Donation & Capitation Fees",
-    description: "Wood card tray and 3 refill packs",
+    description:
+      "Absence of donation and capitation fees. Includes a wood card tray and 3 refill packs.",
   },
   {
-    name: "All documentation Support",
+    name: "All Documentation Support",
     description:
-      "Made from natural materials. Grain and color vary with each item.",
+      "Full support for all documentation needs. Each item is crafted from natural materials, with grain and color variations.",
   },
 ];
 
@@ -34,7 +44,7 @@ export default function Example() {
     <div className="bg-white">
       <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-15 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
         <div>
-          <h2 className="text-6xl font-bold tracking-tight text-blue-800 sm:text-5xl">
+          <h2 className="text-2xl font-bold tracking-tight text-blue-800 sm:text-4xl mt-4 mb-8">
             Are you Looking for Study Abroad
           </h2>
           <p className="mt-4 text-gray-700">
