@@ -1,31 +1,3 @@
-// "use client";
-// import { Carousel } from "@material-tailwind/react";
-// import { urlFor } from "@/lib/client";
-// import Image from "next/image";
-
-// export default function CarouselTransition({ carouselData }: any) {
-//   return (
-//     <Carousel
-//       transition={{ duration: 2 }}
-//       autoplay={true}
-//       autoplayDelay={5000}
-//       loop={true}
-//       className=""
-//       placeholder="Desktop-Slider"
-//     >
-//       {carouselData.map((obj: { sliderImage: any }, index: any) => (
-//         <Image
-//           src={urlFor(obj.sliderImage).url()}
-//           alt="slider-image"
-//           height={1000}
-//           width={2000}
-//           key={index}
-//           className="h-full w-full object-cover"
-//         />
-//       ))}
-//     </Carousel>
-//   );
-// }
 "use client";
 import {
   Carousel,
@@ -57,7 +29,7 @@ const CarouselBannerWrapper = ({ carouselData }: any) => {
         {/* <CarouselPrevious /> */}
         <CarouselContent className="mt-5">
           {carouselData.map((obj: { sliderImage: any }, index: any) => (
-            <CarouselItem>
+            <CarouselItem key={index}>
               <Image
                 src={urlFor(obj.sliderImage).url()}
                 alt="slider-image"

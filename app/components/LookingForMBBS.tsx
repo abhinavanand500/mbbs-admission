@@ -15,36 +15,32 @@ const features = [
   {
     name: "Guaranteed Admission in Top Universities",
     description:
-      "Exclusive guarantee of admission to prestigious universities. Crafted with a solid walnut base featuring rare earth magnets and a powder-coated steel card cover.",
+      "Exclusive guarantee of admission to prestigious universities.",
   },
   {
     name: "Low Admission Fees",
-    description:
-      'Affordable admission fees. Dimensions: 6.25" x 3.55" x 1.15".',
+    description: "Affordable admission fees.",
   },
   {
     name: "100% Visa Clearance Assistance",
-    description:
-      "Comprehensive assistance for obtaining visa clearance. Each item is hand-sanded and finished with natural oil.",
+    description: "Comprehensive assistance for obtaining visa clearance.",
   },
   {
     name: "No Donation & Capitation Fees",
-    description:
-      "Absence of donation and capitation fees. Includes a wood card tray and 3 refill packs.",
+    description: "Absence of donation and capitation fees.",
   },
   {
     name: "All Documentation Support",
-    description:
-      "Full support for all documentation needs. Each item is crafted from natural materials, with grain and color variations.",
+    description: "Full support for all documentation needs.",
   },
 ];
 
 export default function Example() {
   return (
     <div className="bg-white">
-      <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-15 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+      <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-15 sm:px-6 py-8 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight text-blue-800 sm:text-4xl mt-4 mb-8">
+          <h2 className="text-2xl font-bold tracking-tight text-indigo-600 sm:text-4xl mb-8">
             Are you Looking for Study Abroad
           </h2>
           <p className="mt-4 text-gray-700">
@@ -52,10 +48,10 @@ export default function Example() {
             Education Consultant to fulfill your aspiration with:
           </p>
 
-          <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+          <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 sm:gap-y-8 lg:gap-x-8">
             {features.map((feature) => (
               <div key={feature.name} className="border-t border-gray-200 pt-4">
-                <dt className="font-medium text-gray-900">{feature.name}</dt>
+                <dt className="font-medium text-indigo-500">{feature.name}</dt>
                 <dd className="mt-2 text-sm text-gray-500">
                   {feature.description}
                 </dd>

@@ -1,5 +1,5 @@
 "use client";
-import { Fragment, useState, useEffect, useRef } from "react";
+import { Fragment, useState, useRef } from "react";
 import { Dialog, Popover, Tab, Transition, Menu } from "@headlessui/react";
 import { urlFor } from "@/lib/client";
 import logo from "../../public/new-lyf-logo.webp";
@@ -42,13 +42,8 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-type navBarDataType = {
-  id: String;
-};
-
 export default function Example({ navBarData }: any) {
   const [open, setOpen] = useState(false);
-  console.log("ssss", navBarData);
   const dropdownRef = useRef(null);
 
   const [selectedMobileDropdown, setSelectedMobileDropdown] = useState("");
@@ -331,7 +326,7 @@ export default function Example({ navBarData }: any) {
               >
                 <div className="flex h-full space-x-8 ml-4">
                   <Link
-                    href="/learn-german-language-course-in-bangalore"
+                    href="/"
                     className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
                   >
                     Home
