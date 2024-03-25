@@ -104,7 +104,7 @@ export default function Example({ navBarData }: any) {
                   className="ml-4 flex lg:ml-0  mt-4"
                   onClick={toggleDropdown}
                 >
-                  <Link href="/">
+                  <Link href="/" prefetch={false}>
                     <span className="sr-only mt-10">Your Company</span>
                     <Image
                       src={logo}
@@ -121,6 +121,7 @@ export default function Example({ navBarData }: any) {
                   <div key="Home Page" className="flow-root">
                     <Link
                       href="/"
+                      prefetch={false}
                       className="-m-2 block p-2 font-medium text-gray-900"
                     >
                       Home
@@ -174,6 +175,7 @@ export default function Example({ navBarData }: any) {
                                         <Link
                                           href={item.slug}
                                           className="-m-2 p-2 text-gray-500 flex"
+                                          prefetch={false}
                                         >
                                           <Image
                                             src={urlFor(item.image).url()}
@@ -202,6 +204,7 @@ export default function Example({ navBarData }: any) {
                 >
                   <div key="ausbildung" className="flow-root">
                     <Link
+                      prefetch={false}
                       href="/ausbildung"
                       className="-m-2 block p-2 font-medium text-gray-900"
                     >
@@ -217,6 +220,7 @@ export default function Example({ navBarData }: any) {
                     <Link
                       href="/learn-german-language-course-in-bangalore"
                       className="-m-2 block p-2 font-medium text-gray-900"
+                      prefetch={false}
                     >
                       Learn German
                     </Link>
@@ -230,6 +234,7 @@ export default function Example({ navBarData }: any) {
                     <Link
                       href="/blog"
                       className="-m-2 block p-2 font-medium text-gray-900"
+                      prefetch={false}
                     >
                       Blog
                     </Link>
@@ -243,6 +248,7 @@ export default function Example({ navBarData }: any) {
                     <Link
                       href="/contact"
                       className="-m-2 block p-2 font-medium text-gray-900"
+                      prefetch={false}
                     >
                       Contact
                     </Link>
@@ -313,7 +319,7 @@ export default function Example({ navBarData }: any) {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <Link href="/">
+                <Link href="/" prefetch={false}>
                   <span className="sr-only">Your Company</span>
                   <Image src={logo} alt={""} height={60} width={100} />
                 </Link>
@@ -328,6 +334,7 @@ export default function Example({ navBarData }: any) {
                   <Link
                     href="/"
                     className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                    prefetch={false}
                   >
                     Home
                   </Link>
@@ -382,6 +389,7 @@ export default function Example({ navBarData }: any) {
                                                       <Link
                                                         href={`/${navItem.slug}`}
                                                         onClick={close}
+                                                        prefetch={false}
                                                       >
                                                         <p
                                                           id={`${navItem._id}-heading`}
@@ -420,6 +428,7 @@ export default function Example({ navBarData }: any) {
                   <Link
                     href="/ausbildung"
                     className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                    prefetch={false}
                   >
                     Ausbildung
                   </Link>
@@ -427,6 +436,7 @@ export default function Example({ navBarData }: any) {
                   <Link
                     href="/learn-german-language-course-in-bangalore"
                     className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                    prefetch={false}
                   >
                     Learn German
                   </Link>
@@ -434,12 +444,14 @@ export default function Example({ navBarData }: any) {
                   <Link
                     href="/blog"
                     className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                    prefetch={false}
                   >
                     Blog
                   </Link>
                   <Link
                     href="/contact"
                     className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                    prefetch={false}
                   >
                     Contact
                   </Link>

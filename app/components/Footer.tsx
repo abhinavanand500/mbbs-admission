@@ -39,6 +39,7 @@ const Footer = ({ navBarData }: any) => {
                   <Link
                     href={obj.slug}
                     className="text-gray-600 hover:text-gray-800"
+                    prefetch={false}
                   >
                     * {obj.title}
                   </Link>
@@ -51,6 +52,7 @@ const Footer = ({ navBarData }: any) => {
                   <Link
                     href={obj.slug}
                     className="text-gray-600 hover:text-gray-800"
+                    prefetch={false}
                   >
                     * {obj.title}
                   </Link>
@@ -63,6 +65,7 @@ const Footer = ({ navBarData }: any) => {
                   <Link
                     href={obj.slug}
                     className="text-gray-600 hover:text-gray-800"
+                    prefetch={false}
                   >
                     * {obj.title}
                   </Link>
@@ -75,6 +78,7 @@ const Footer = ({ navBarData }: any) => {
                   <Link
                     href={obj.slug}
                     className="text-gray-600 hover:text-gray-800"
+                    prefetch={false}
                   >
                     * {obj.title}
                   </Link>

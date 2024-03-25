@@ -12,9 +12,9 @@ const Tabs = ({ children }: any) => {
   return (
     <div className="max-w-full mx-auto">
       <div className="flex border-b border-gray-300">
-        {children?.map((child: any) => (
+        {children?.map((child: any, index: any) => (
           <button
-            key={child?.props.label}
+            key={index}
             className={`${
               activeTab === child.props.label
                 ? "border-b-2 border-purple-500"
@@ -27,11 +27,9 @@ const Tabs = ({ children }: any) => {
         ))}
       </div>
       <div className="py-4">
-        {children.map((child: any) => {
+        {children.map((child: any, index: any) => {
           if (child?.props?.label === activeTab) {
-            return (
-              <div key={child?.props?.label}>{child?.props?.children}</div>
-            );
+            return <div key={index}>{child?.props?.children}</div>;
           }
           return null;
         })}
