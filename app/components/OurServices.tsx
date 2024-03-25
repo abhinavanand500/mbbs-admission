@@ -10,9 +10,9 @@ const OurServices = () => {
     <section className="text-gray-600 body-font">
       <div className="container px-5 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="text-4xl font-bold tracking-tight text-indigo-600 sm:text-4xl mt-4 mb-8">
+          <h2 className="text-4xl font-bold tracking-tight text-indigo-600 sm:text-4xl mt-4 mb-8">
             OUR SERVICES
-          </h1>
+          </h2>
           <p className="lg:w-3/4 mx-auto leading-relaxed text-base text-justify">
             We provide complete study abroad admission solution services to
             Indian students in seeking admission to the popular course MBBS. We
