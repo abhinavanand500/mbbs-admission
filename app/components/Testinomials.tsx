@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
@@ -33,7 +35,14 @@ const Testinomials = ({ testinomials }: any) => {
           </div>
         </div>
 
-        <Carousel className="container md:px-40 mx-auto">
+        <Carousel
+          className="container md:px-40 mx-auto"
+          //   plugins={[
+          //     Autoplay({
+          //       delay: 2000,
+          //     }),
+          //   ]}
+        >
           <CarouselContent className="-ml-1">
             {testinomials?.review.map((review: any, index: any) => {
               return (
@@ -43,12 +52,12 @@ const Testinomials = ({ testinomials }: any) => {
                 >
                   <div className="p-1">
                     <div className="p-4 sm:mb-0 mb-6">
-                      <div className="rounded-lg h-40 w-40 overflow-hidden items-center sm:ml-10 ml-20">
+                      <div className="rounded-lg h-40 w-40 overflow-hidden flex items-center justify-center mx-auto">
                         <Image
                           alt={review.metaTitle}
                           height={200}
                           width={200}
-                          className="object-fill h-full w-full rounded"
+                          className="object-contain h-full w-full rounded"
                           src={urlFor(review.studentImage).url()}
                         />
                       </div>
@@ -58,7 +67,7 @@ const Testinomials = ({ testinomials }: any) => {
                       <a className="text-indigo-500 inline-flex items-center mt-3">
                         {review.collegeName} ({review.country})
                       </a>
-                      <p className="leading-relaxed mt-2 text-sm">
+                      <p className="leading-relaxed mt-2 text-sm text-center">
                         {review.studentTestimonial}
                       </p>
                     </div>
@@ -67,8 +76,8 @@ const Testinomials = ({ testinomials }: any) => {
               );
             })}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-16 top-1/4 sm:top-1/3" />
-          <CarouselNext className="absolute right-16 top-1/4 sm:top-1/3" />
+          <CarouselPrevious className="absolute left-14 top-1/4 sm:top-1/3" />
+          <CarouselNext className="absolute right-14 top-1/4 sm:top-1/3" />
         </Carousel>
       </section>
     </div>
