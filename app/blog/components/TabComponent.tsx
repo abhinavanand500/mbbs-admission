@@ -11,7 +11,13 @@ const Tabs = ({ children }: any) => {
 
   return (
     <div className="max-w-full mx-auto">
-      <div className="flex border-b border-gray-300">
+      <div
+        className="flex border-b border-gray-300 overflow-x-auto container"
+        style={{
+          overflowY: "scroll",
+          scrollbarWidth: "none",
+        }}
+      >
         {children?.map((child: any, index: any) => (
           <button
             key={index}
@@ -19,12 +25,15 @@ const Tabs = ({ children }: any) => {
               activeTab === child.props.label
                 ? "border-b-2 border-purple-500"
                 : ""
-            } flex-1 text-gray-700 font-medium py-2`}
+            } flex-shrink-0 whitespace-no-wrap text-gray-700 font-medium py-2 px-3 mx-1`}
             onClick={(e) => handleClick(e, child.props.label)}
           >
             {child.props.label}
           </button>
         ))}
+        {/* <div className="hidden md:flex flex-grow mr-20 absolute right-0 items-center">
+          dsvousdbvou
+        </div> */}
       </div>
       <div className="py-4">
         {children.map((child: any, index: any) => {

@@ -11,7 +11,7 @@ const ShimmerUIBlog = () => {
             <Skeleton className="w-30 sm:w-80 h-[40px] rounded-full items-stretch " />
           }
         >
-          <div className="py-4 md:flex items-center justify-center mx-20 md:mx-1">
+          <div className="py-4 md:flex items-center justify-center mx-6 md:mx-1">
             <div className="flex flex-col space-y-3 my-20 md:my-4 md:mx-6">
               <Skeleton className="h-[125px] w-[250px] rounded-xl" />
               <div className="space-y-2">

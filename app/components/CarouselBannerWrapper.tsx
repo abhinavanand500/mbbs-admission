@@ -29,23 +29,25 @@ const CarouselBannerWrapper = ({ carouselData }: any) => {
         {/* <CarouselPrevious /> */}
         <CarouselContent className="mt-5">
           {carouselData.map((obj: { sliderImage: any }, index: any) => (
-            <CarouselItem key={index}>
-              <Image
-                src={urlFor(obj.sliderImage).url()}
-                alt="slider-image"
-                height={1000}
-                width={2000}
-                key={index}
-                className="h-full w-full object-cover"
-              />
-            </CarouselItem>
+            <>
+              <CarouselItem key={index}>
+                <Image
+                  src={urlFor(obj.sliderImage).url()}
+                  alt="slider-image"
+                  height={1000}
+                  width={2000}
+                  key={index}
+                  className="h-full sm:h-5/6 w-full object-fill"
+                />
+              </CarouselItem>
+            </>
           ))}
         </CarouselContent>
 
-        <div className="absolute left-16 top-1/2">
+        <div className="absolute left-16 top-1/2 sm:top-1/3">
           <CarouselPrevious />
         </div>
-        <div className="absolute right-16 top-1/2">
+        <div className="absolute right-16 top-1/2 sm:top-1/3">
           <CarouselNext />
         </div>
       </Carousel>

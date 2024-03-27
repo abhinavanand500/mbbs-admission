@@ -17,7 +17,7 @@ const page = () => {
           </p>
         </div>
       </section>
-      <div className="container py-12 mx-auto w-full items-center justify-center">
+      <div className="sm:container py-12 mx-auto w-full items-center justify-center">
         <BlogSection />
       </div>
     </>
