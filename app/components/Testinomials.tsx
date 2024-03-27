@@ -43,7 +43,7 @@ const Testinomials = ({ testinomials }: any) => {
                 >
                   <div className="p-1">
                     <div className="p-4 sm:mb-0 mb-6">
-                      <div className="rounded-lg h-40 w-40 overflow-hidden items-center sm:ml-10 ml-24">
+                      <div className="rounded-lg h-40 w-40 overflow-hidden items-center sm:ml-10 ml-20">
                         <Image
                           alt={review.metaTitle}
                           height={200}
