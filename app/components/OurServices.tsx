@@ -1,8 +1,8 @@
 import React from "react";
-import world from "./world.png";
-import scholar from "./scholar.png";
-import handshake from "./handshake.png";
-import community from "./community.png";
+import world from "./Assets/world.png";
+import scholar from "./Assets/scholar.png";
+import handshake from "./Assets/handshake.png";
+import community from "./Assets/community.png";
 import Image from "next/image";
 
 const OurServices = () => {
