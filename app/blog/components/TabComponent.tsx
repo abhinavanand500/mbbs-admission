@@ -31,9 +31,6 @@ const Tabs = ({ children }: any) => {
             {child.props.label}
           </button>
         ))}
-        {/* <div className="hidden md:flex flex-grow mr-20 absolute right-0 items-center">
-          dsvousdbvou
-        </div> */}
       </div>
       <div className="py-4">
         {children.map((child: any, index: any) => {

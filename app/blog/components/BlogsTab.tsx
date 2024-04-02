@@ -1,10 +1,21 @@
 "use client";
-import React, { useState } from "react";
 import Cards from "./Cards";
+import React, { useState, useEffect } from "react";
 
 const BlogsTab = ({ blogContent, tabDetail }: any) => {
   const [blogDetailsForCurrentTab, setBlogDetailsForCurrentTab] =
     useState(blogContent);
+
+  useEffect(() => {
+    if (tabDetail !== "All") {
+      const result = blogContent.filter((val: any) => {
+        return val.blogCategory === tabDetail;
+      });
+      setBlogDetailsForCurrentTab(result);
+    } else {
+      setBlogDetailsForCurrentTab(blogContent);
+    }
+  }, [tabDetail, blogContent]);
 
   return (
     <div className="flex-1 w-full grid-cols-3">

@@ -11,9 +11,7 @@ const BlogShimmer = () => {
           </h1>
         </div>
       </section>
-      <div className="sm:container py-12 mx-auto w-full items-center justify-center">
-        {/* / */}
-      </div>
+      <div className="sm:container py-12 mx-auto w-full items-center justify-center"></div>
     </div>
   );
 };
