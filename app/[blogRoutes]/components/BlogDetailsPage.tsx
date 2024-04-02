@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import { urlFor } from "@/lib/client";
-import TextSerializer from "./TextSerializers";
 
 const BlogDetailsPage = (props: any) => {
   console.log("tttt", props);
@@ -22,10 +21,10 @@ const BlogDetailsPage = (props: any) => {
           width={10000}
           alt={props?.blogDetailsContent?.data?.title}
         />
-        <TextSerializer
+        {/* <TextSerializer
           data={props?.blogDetailsContent?.data?.pageContent}
           className="serializerTitle"
-        />
+        /> */}
       </div>
     </div>
   );
