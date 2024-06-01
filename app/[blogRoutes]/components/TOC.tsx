@@ -14,8 +14,8 @@ interface Heading {
 function TOC() {
   const [headings, setHeadings] = useState<Heading[]>([]);
   const router = useRouter();
-  console.log("ssssss", router);
-  const { asPath } = router;
+  //   console.log("ssssss", router);
+  //   const { asPath } = router;
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -29,7 +29,7 @@ function TOC() {
       }));
       setHeadings(elements);
     }
-  }, [asPath]);
+  }, []);
 
   return (
     <nav>
