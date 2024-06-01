@@ -26,7 +26,6 @@ const CarouselBannerWrapper = ({ carouselData }: any) => {
           }),
         ]}
       >
-        {/* <CarouselPrevious /> */}
         <CarouselContent className="mt-5">
           {carouselData.map((obj: { sliderImage: any }, index: any) => (
             <>

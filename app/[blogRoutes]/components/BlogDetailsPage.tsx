@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import { urlFor } from "@/lib/client";
+import TextSerializer from "./TextSerializers";
+import TOC from "./TOC";
 
 const BlogDetailsPage = (props: any) => {
-  console.log("tttt", props);
   return (
     <div>
       <section className="text-white body-font bg-indigo-600 bg-gradient-to-r">
@@ -13,7 +14,7 @@ const BlogDetailsPage = (props: any) => {
           </h1>
         </div>
       </section>
-      <div className="container py-8 mx-auto w-full items-center justify-center text-justify sm:p-40">
+      <div className="container py-8 mx-auto w-full items-center justify-center text-justify tex sm:p-40">
         <Image
           src={urlFor(props?.blogDetailsContent?.data.bannerImage).url()}
           className="h-3/4 max-w-full object-fill"
@@ -21,10 +22,13 @@ const BlogDetailsPage = (props: any) => {
           width={10000}
           alt={props?.blogDetailsContent?.data?.title}
         />
-        {/* <TextSerializer
+        <div className="tocContainer">
+          {props?.blogDetailsContent?.data && <TOC />}
+        </div>
+        <TextSerializer
           data={props?.blogDetailsContent?.data?.pageContent}
-          className="serializerTitle"
-        /> */}
+          className="serializerTitle mt-4"
+        />
       </div>
     </div>
   );
