@@ -15,7 +15,7 @@ const BlogDetailsPage = (props: any) => {
         </div>
       </section>
       <div className="container py-8 mx-auto w-full items-center justify-center text-justify tex sm:p-40">
-        <Image
+        <img
           src={urlFor(props?.blogDetailsContent?.data.bannerImage).url()}
           className="h-3/4 max-w-full object-fill"
           height={1000}
