@@ -47,7 +47,6 @@ const Page: React.FC<PageProps> = (props) => {
     return <div>Blog not found.</div>;
   }
 
-  const { data, faq, youtubeEmbedRes } = blogDetailsContent;
   return (
     <>
       {/* Your JSX for rendering blog details */}

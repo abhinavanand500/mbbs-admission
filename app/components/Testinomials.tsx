@@ -37,17 +37,17 @@ const Testinomials = ({ testinomials }: any) => {
 
         <Carousel
           className="container md:px-40 mx-auto"
-          //   plugins={[
-          //     Autoplay({
-          //       delay: 2000,
-          //     }),
-          //   ]}
+          plugins={[
+            Autoplay({
+              delay: 2000,
+            }),
+          ]}
         >
           <CarouselContent className="-ml-1">
             {testinomials?.review.map((review: any, index: any) => {
               return (
                 <CarouselItem
-                  className="pl-1 md:basis-1/2 lg:basis-1/4"
+                  className="pl-1 md:basis-1/2 lg:basis-1/3"
                   key={index}
                 >
                   <div className="p-1">

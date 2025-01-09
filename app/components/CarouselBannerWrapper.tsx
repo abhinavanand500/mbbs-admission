@@ -22,7 +22,7 @@ const CarouselBannerWrapper = ({ carouselData }: any) => {
         }}
         plugins={[
           Autoplay({
-            delay: 5000,
+            delay: 50000,
           }),
         ]}
       >

@@ -299,7 +299,7 @@ export default function Example({ navBarData }: any) {
       </Transition.Root>
 
       {/* Computer view */}
-      <header className="fixed top-0 z-10 w-full bg-white mb-40">
+      <header className="fixed top-0 z-20 w-full bg-white mb-40">
         <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
           info@new-lyf.com
         </p>

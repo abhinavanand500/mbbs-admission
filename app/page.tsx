@@ -1,7 +1,8 @@
 import { getHomePageData } from "@/lib/getHomePageData";
 import { Providers } from "./components/provider";
-import CarouselBannerWrapper from "./components/CarouselBannerWrapper";
+import HomeBanner from "./components/HomeBanner";
 import LookingForMBBS from "./components/LookingForMBBS";
+import CountryList from "./components/CountryList";
 import OurServices from "./components/OurServices";
 import Testinomials from "./components/Testinomials";
 export default async function LandingPage() {
@@ -15,9 +16,10 @@ export default async function LandingPage() {
 
   return (
     <Providers>
-      <CarouselBannerWrapper carouselData={sliderData.slider} />
+      <HomeBanner sliderData={sliderData} />
       <LookingForMBBS />
       <OurServices />
+      <CountryList />
       <Testinomials testinomials={testimonials} />
     </Providers>
   );
