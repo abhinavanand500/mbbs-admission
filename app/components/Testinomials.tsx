@@ -54,7 +54,7 @@ const Testinomials = ({ testinomials }: any) => {
                     <div className="p-4 sm:mb-0 mb-6">
                       <div className="rounded-lg h-40 w-40 overflow-hidden flex items-center justify-center mx-auto">
                         <Image
-                          alt={review.metaTitle}
+                          alt={review.metaTitle || "metadata"}
                           height={200}
                           width={200}
                           className="object-contain h-full w-full rounded"

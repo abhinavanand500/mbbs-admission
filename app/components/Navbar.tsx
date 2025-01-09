@@ -108,7 +108,7 @@ export default function Example({ navBarData }: any) {
                     <span className="sr-only mt-10">Your Company</span>
                     <Image
                       src={logo}
-                      alt={"Mbbs Admission in Abroad"}
+                      alt="Mbbs Admission in Abroad"
                       height={80}
                       width={120}
                     />
@@ -281,14 +281,19 @@ export default function Example({ navBarData }: any) {
                       target="_blank"
                       className="text-sm font-medium text-gray-700 hover:text-gray-800"
                     >
-                      <Image src={linkedIn} height={60} width={60} alt={""} />
+                      <Image
+                        src={linkedIn}
+                        height={60}
+                        width={60}
+                        alt="linkedin"
+                      />
                     </a>
                     <a
                       href="https://www.instagram.com/abhinav_anand_/"
                       target="_blank"
                       className="text-sm font-medium text-gray-700 hover:text-gray-800"
                     >
-                      <Image src={insta} height={60} width={60} alt={""} />
+                      <Image src={insta} height={60} width={60} alt="insta" />
                     </a>
                   </div>
                 </div>
@@ -321,7 +326,7 @@ export default function Example({ navBarData }: any) {
               <div className="ml-4 flex lg:ml-0">
                 <Link href="/" prefetch={false}>
                   <span className="sr-only">Your Company</span>
-                  <Image src={logo} alt={""} height={60} width={100} />
+                  <Image src={logo} alt="logo" height={60} width={100} />
                 </Link>
               </div>
 
@@ -399,7 +404,7 @@ export default function Example({ navBarData }: any) {
                                                             src={urlFor(
                                                               navItem.image
                                                             ).url()}
-                                                            alt=""
+                                                            alt="navbar"
                                                             width={100}
                                                             height={100}
                                                             className="block h-auto w-5 flex-shrink-0 mr-5 object-contain"
