@@ -97,7 +97,7 @@ function index() {
         </div>
         <div className="flex flex-wrap -m-4">
           {countriesList.map((item, i) => (
-            <div key={i} className="sm:w-full md:w-1/2 xl:w-1/4 p-4">
+            <div key={i} className="w-full md:w-1/2 xl:w-1/4 p-4">
               <Link href={item.slug}>
                 <div className="bg-white p-2 rounded-lg border border-gray-300 cursor-pointer">
                   <Image
