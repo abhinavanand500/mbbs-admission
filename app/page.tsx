@@ -5,6 +5,7 @@ import LookingForMBBS from "./components/LookingForMBBS";
 import CountryList from "./components/CountryList";
 import OurServices from "./components/OurServices";
 import Testinomials from "./components/Testinomials";
+import Whyus from "./components/Whyus";
 export default async function LandingPage() {
   const homePageData = await getHomePageData();
   let sliderData =
@@ -20,6 +21,7 @@ export default async function LandingPage() {
       <LookingForMBBS />
       <OurServices />
       <CountryList />
+      <Whyus />
       <Testinomials testinomials={testimonials} />
     </Providers>
   );

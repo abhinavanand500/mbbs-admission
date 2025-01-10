@@ -305,7 +305,7 @@ export default function Example({ navBarData }: any) {
 
       {/* Computer view */}
       <header className="fixed top-0 z-20 w-full bg-white mb-40">
-        <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+        <p className="flex h-10 items-center justify-center bg-blue-800 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
           info@new-lyf.com
         </p>
 
@@ -353,7 +353,7 @@ export default function Example({ navBarData }: any) {
                                 <Menu.Button
                                   className={classNames(
                                     open
-                                      ? "border-indigo-600 text-indigo-600"
+                                      ? "border-blue-800 text-blue-800"
                                       : "border-transparent text-gray-700 hover:text-gray-800",
                                     "relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out outline-none"
                                   )}

@@ -36,9 +36,14 @@ function TextSerializer({ data, className }) {
       ),
     },
     block: {
-      p: ({ children }) => <p>{children}</p>,
+      p: ({ children }) => (
+        <p className="text-gray-800 leading-relaxed">{children}</p>
+      ),
       h1: ({ children }) => (
-        <h1 className="text-black text-4xl font-bold my-8" id={addId(children)}>
+        <h1
+          className="text-black text-4xl font-bold mt-5 mb-2"
+          id={addId(children)}
+        >
           {children}
         </h1>
       ),

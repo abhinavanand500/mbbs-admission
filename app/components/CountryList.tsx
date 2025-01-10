@@ -85,7 +85,7 @@ function index() {
             <h1 className="sm:text-4xl text-2xl font-semibold title-font mb-2 text-blue-900">
               Most Popular Countries
             </h1>
-            <div className="h-1 w-20 bg-indigo-500 rounded"></div>
+            <div className="h-1 w-20 bg-blue-700 rounded"></div>
           </div>
           <p className="lg:w-1/2 w-full leading-relaxed text-gray-900">
             Deciding where to pursue your MBBS degree is a crucial step in your

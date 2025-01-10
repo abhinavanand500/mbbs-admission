@@ -7,7 +7,7 @@ import TOC from "./TOC";
 const BlogDetailsPage = (props: any) => {
   return (
     <div>
-      <section className="text-white body-font bg-indigo-600 bg-gradient-to-r">
+      <section className="text-white body-font bg-blue-800 bg-gradient-to-r">
         <div className="container py-12 mx-auto">
           <h1 className="text-4xl font-large font-extrabold title-font text-center text-white">
             {props?.blogDetailsContent?.data?.metaKeywords}

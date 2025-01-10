@@ -41,9 +41,17 @@ function TOC() {
               href={`#${heading.id}`}
               onClick={(e) => {
                 e.preventDefault();
-                document.querySelector(`#${heading.id}`)?.scrollIntoView({
-                  behavior: "smooth",
-                });
+                const targetElement = document.querySelector(`#${heading.id}`);
+                if (targetElement) {
+                  const offset = 120; // Adjust this value as needed to scroll slightly down
+                  const targetPosition =
+                    targetElement.getBoundingClientRect().top +
+                    window.pageYOffset;
+                  window.scrollTo({
+                    top: targetPosition - offset,
+                    behavior: "smooth",
+                  });
+                }
               }}
             >
               {heading.text}

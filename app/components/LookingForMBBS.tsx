@@ -40,7 +40,7 @@ export default function Example() {
     <div className="bg-white">
       <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-15 sm:px-6 py-8 sm:pb-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight text-indigo-600 sm:text-4xl mb-8">
+          <h2 className="text-2xl font-bold tracking-tight text-blue-800 sm:text-4xl mb-8">
             Are you Looking for Study Abroad
           </h2>
           <p className="mt-4 text-gray-700">
@@ -51,7 +51,7 @@ export default function Example() {
           <dl className="mt-4 sm:mt-16 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 sm:gap-y-8 lg:gap-x-8">
             {features.map((feature) => (
               <div key={feature.name} className="border-t border-gray-200 pt-4">
-                <dt className="font-medium text-indigo-500">{feature.name}</dt>
+                <dt className="font-medium text-blue-700">{feature.name}</dt>
                 <dd className="mt-2 text-sm text-gray-500">
                   {feature.description}
                 </dd>

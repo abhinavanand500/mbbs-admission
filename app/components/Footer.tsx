@@ -17,7 +17,7 @@ const Footer = ({ navBarData }: any) => {
     <div>
       <footer className="text-gray-600 body-font bg-gray-100 mt-40">
         <div className="flex flex-col text-center w-full">
-          <h1 className="sm:text-3xl text-2xl font-bold title-font mt-4 text-indigo-600">
+          <h1 className="sm:text-3xl text-2xl font-bold title-font mt-4 text-blue-800">
             Quick Links that might help
           </h1>
         </div>
@@ -27,7 +27,7 @@ const Footer = ({ navBarData }: any) => {
               <Image src={logo} alt={""} height={60} width={60} />
               <span className="ml-3 text-xl">Tailblocks</span>
             </a> */}
-            <p className="mt-2 text-sm text-indigo-600">
+            <p className="mt-2 text-sm text-blue-800">
               Air plant banjo lyft occupy retro adaptogen indego
             </p>
           </div>

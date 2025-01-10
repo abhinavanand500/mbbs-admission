@@ -24,7 +24,7 @@ const Cards = ({ blog, index }: any) => {
             </h1>
             <p className="leading-relaxed mb-3">{blog.metaDescription}</p>
             <div className="flex items-center flex-wrap ">
-              <div className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+              <div className="text-blue-700 inline-flex items-center md:mb-2 lg:mb-0">
                 Learn More
                 <svg
                   className="w-4 h-4 ml-2"

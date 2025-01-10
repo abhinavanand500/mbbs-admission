@@ -18,10 +18,10 @@ const Testinomials = ({ testinomials }: any) => {
         <div className="container px-5 mt-24 mx-auto">
           <div className="flex flex-col">
             <div className="h-1 bg-gray-200 rounded overflow-hidden">
-              <div className="w-24 h-full bg-indigo-500"></div>
+              <div className="w-24 h-full bg-blue-700"></div>
             </div>
             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-              <h2 className="sm:w-2/5 text-4xl font-bold tracking-tight text-indigo-600 sm:text-4xl mt-4 mb-8">
+              <h2 className="sm:w-2/5 text-4xl font-bold tracking-tight text-blue-800 sm:text-4xl mt-4 mb-8">
                 Discover What Our Students Say
               </h2>
               <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">
@@ -64,7 +64,7 @@ const Testinomials = ({ testinomials }: any) => {
                       <h2 className="text-xl font-medium title-font text-gray-900 mt-5 text-center">
                         {review.metaTitle}
                       </h2>
-                      <a className="text-indigo-500 inline-flex items-center mt-3">
+                      <a className="text-blue-700 inline-flex items-center mt-3">
                         {review.collegeName} ({review.country})
                       </a>
                       <p className="leading-relaxed mt-2 text-sm text-center">

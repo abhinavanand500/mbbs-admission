@@ -30,7 +30,7 @@ const OurServices = () => {
                 src={world}
                 height={50}
                 width={50}
-                className="text-indigo-500 w-12 h-12 mb-3 inline-block"
+                className="text-blue-700 w-12 h-12 mb-3 inline-block"
               />
               <h2 className="title-font font-medium text-3xl text-gray-900">
                 13 Countries
@@ -47,7 +47,7 @@ const OurServices = () => {
                 src={scholar}
                 height={50}
                 width={50}
-                className="text-indigo-500 w-12 h-12 mb-3 inline-block"
+                className="text-blue-700 w-12 h-12 mb-3 inline-block"
               />
               <h2 className="title-font font-medium text-3xl text-gray-900">
                 5000+
@@ -65,7 +65,7 @@ const OurServices = () => {
                 src={handshake}
                 height={50}
                 width={50}
-                className="text-indigo-500 w-12 h-12 mb-3 inline-block"
+                className="text-blue-700 w-12 h-12 mb-3 inline-block"
               />
               <h2 className="title-font font-medium text-3xl text-gray-900">
                 250+
@@ -82,7 +82,7 @@ const OurServices = () => {
                 src={community}
                 height={50}
                 width={50}
-                className="text-indigo-500 w-12 h-12 mb-3 inline-block"
+                className="text-blue-700 w-12 h-12 mb-3 inline-block"
               />
               <h2 className="title-font font-medium text-3xl text-gray-900">
                 15+

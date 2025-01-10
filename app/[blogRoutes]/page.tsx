@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { getBlogDetails } from "../../lib/getBlogDetails";
 import BlogDetailsPage from "./components/BlogDetailsPage";
 import BlogShimmer from "./components/BlogShimmer";
+import Notfound from "../not-found";
 
 interface PageProps {
   params?: {
@@ -44,7 +45,7 @@ const Page: React.FC<PageProps> = (props) => {
   }
 
   if (blogDetailsContent.notFound) {
-    return <div>Blog not found.</div>;
+    return <Notfound />;
   }
 
   return (

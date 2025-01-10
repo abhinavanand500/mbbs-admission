@@ -1,4 +1,6 @@
 {
+  "/contact/page": "app/contact/page.js",
+  "/page": "app/page.js",
   "/[blogRoutes]/page": "app/[blogRoutes]/page.js",
-  "/page": "app/page.js"
+  "/blog/page": "app/blog/page.js"
 }
