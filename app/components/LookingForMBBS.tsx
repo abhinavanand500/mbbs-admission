@@ -38,7 +38,7 @@ const features = [
 export default function Example() {
   return (
     <div className="bg-white">
-      <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-15 sm:px-6 py-8 sm:pb-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+      <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 sm:px-6 py-8 sm:pb-16 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
         <div>
           <h2 className="text-2xl font-bold tracking-tight text-blue-800 sm:text-4xl mb-8">
             Are you Looking for Study Abroad

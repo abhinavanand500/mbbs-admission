@@ -276,7 +276,7 @@ export default function Example({ navBarData }: any) {
                     >
                       <Image src={github} height={60} width={60} alt={""} />
                     </a> */}
-                    <a
+                    {/* <a
                       href="https://www.linkedin.com/in/abhinav-a-216a0a110/"
                       target="_blank"
                       className="text-sm font-medium text-gray-700 hover:text-gray-800"
@@ -287,9 +287,9 @@ export default function Example({ navBarData }: any) {
                         width={60}
                         alt="linkedin"
                       />
-                    </a>
+                    </a> */}
                     <a
-                      href="https://www.instagram.com/abhinav_anand_/"
+                      href="https://www.instagram.com/mbbsadmissionsinabroad/"
                       target="_blank"
                       className="text-sm font-medium text-gray-700 hover:text-gray-800"
                     >
@@ -467,7 +467,7 @@ export default function Example({ navBarData }: any) {
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-2">
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                   <p className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                    Connect with me on
+                    Connect with us on
                   </p>
                   {/* <span className="h-6 w-px bg-gray-200" aria-hidden="true" /> */}
                   {/* <a
@@ -482,7 +482,7 @@ export default function Example({ navBarData }: any) {
                       alt="abhinavanand500"
                     />
                   </a> */}
-                  <a
+                  {/* <a
                     href="https://www.linkedin.com/in/abhinav-a-216a0a110/"
                     target="_blank"
                     className="text-sm font-medium text-gray-700 hover:text-gray-800"
@@ -493,9 +493,9 @@ export default function Example({ navBarData }: any) {
                       width={60}
                       alt="abhinav-a-216a0a110"
                     />
-                  </a>
+                  </a> */}
                   <a
-                    href="https://www.instagram.com/abhinav_anand_/"
+                    href="https://www.instagram.com/mbbsadmissionsinabroad/"
                     target="_blank"
                     className="text-sm font-medium text-gray-700 hover:text-gray-800"
                   >
@@ -503,7 +503,7 @@ export default function Example({ navBarData }: any) {
                       src={insta}
                       height={60}
                       width={60}
-                      alt="abhinav_anand_"
+                      alt="mbbs_admission_in_abroad"
                     />
                   </a>
                 </div>

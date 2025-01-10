@@ -38,7 +38,7 @@ const Whyus = () => {
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-4 mx-auto">
-        <div className="text-center mb-20">
+        <div className="text-center my-10 ">
           <h2 className="text-4xl font-bold tracking-tight text-blue-900 sm:text-4xl mt-4 mb-8">
             WHY STUDY MBBS IN ABROAD?
           </h2>

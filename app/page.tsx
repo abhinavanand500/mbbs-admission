@@ -6,6 +6,14 @@ import CountryList from "./components/CountryList";
 import OurServices from "./components/OurServices";
 import Testinomials from "./components/Testinomials";
 import Whyus from "./components/Whyus";
+import Assist from "./components/Assist";
+import {
+  howCanWeAssistYou,
+  faq,
+  howCanWeAssistYouSummary,
+  faqSummary,
+} from "./utilities/HomePageStaticData";
+
 export default async function LandingPage() {
   const homePageData = await getHomePageData();
   let sliderData =
@@ -20,8 +28,19 @@ export default async function LandingPage() {
       <HomeBanner sliderData={sliderData} />
       <LookingForMBBS />
       <OurServices />
-      <CountryList />
       <Whyus />
+      <Assist
+        data={howCanWeAssistYou}
+        title="HOW CAN WE ASSIST YOU"
+        summary={howCanWeAssistYouSummary}
+      />
+      <CountryList />
+
+      <Assist
+        data={faq}
+        title="MBBS ADMISSION CONSULTANCY IN INDIA"
+        summary={faqSummary}
+      />
       <Testinomials testinomials={testimonials} />
     </Providers>
   );

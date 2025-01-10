@@ -79,7 +79,7 @@ const countriesList = [
 function index() {
   return (
     <section className="text-gray-600 body-font container">
-      <div className="sm:px-12 px-2 py-24">
+      <div className="sm:px-12 px-2 py-10">
         <div className="flex flex-wrap w-full mb-20">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
             <h1 className="sm:text-4xl text-2xl font-semibold title-font mb-2 text-blue-900">

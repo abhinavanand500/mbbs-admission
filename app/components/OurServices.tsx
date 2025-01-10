@@ -9,7 +9,7 @@ const OurServices = () => {
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 mx-auto">
-        <div className="flex flex-col text-center w-full mb-20">
+        <div className="flex flex-col text-center w-full mb-10">
           <h2 className="text-4xl font-bold tracking-tight text-blue-900 sm:text-4xl mt-4 mb-8">
             OUR SERVICES
           </h2>
