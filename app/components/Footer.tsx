@@ -17,9 +17,9 @@ const Footer = ({ navBarData }: any) => {
     <div>
       <footer className="text-gray-600 body-font bg-gray-100 mt-40">
         <div className="flex flex-col text-center w-full">
-          <h1 className="sm:text-3xl text-2xl font-bold title-font mt-4 text-blue-800">
+          <h2 className="sm:text-3xl text-2xl font-bold title-font mt-4 text-blue-800">
             Quick Links that might help
-          </h1>
+          </h2>
         </div>
         <div className="container px-5 p-12 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
