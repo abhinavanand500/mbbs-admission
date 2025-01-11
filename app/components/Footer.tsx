@@ -27,9 +27,9 @@ const Footer = ({ navBarData }: any) => {
               <Image src={logo} alt={""} height={60} width={60} />
               <span className="ml-3 text-xl">Tailblocks</span>
             </a> */}
-            <p className="mt-2 text-sm text-blue-800">
+            {/* <p className="mt-2 text-sm text-blue-800">
               Air plant banjo lyft occupy retro adaptogen indego
-            </p>
+            </p> */}
           </div>
 
           <div className="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
@@ -51,7 +51,7 @@ const Footer = ({ navBarData }: any) => {
                 <nav className="list-none mb-4" key={index}>
                   <Link
                     href={obj.slug}
-                    className="text-gray-600 hover:text-gray-800"
+                    className="text-gray-600 hover:text-gray-800 font-semibold"
                     prefetch={false}
                   >
                     * {obj.title}
