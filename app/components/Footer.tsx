@@ -38,7 +38,7 @@ const Footer = ({ navBarData }: any) => {
                 <nav className="list-none mb-4" key={index}>
                   <Link
                     href={obj.slug}
-                    className="text-gray-600 hover:text-gray-800"
+                    className="text-gray-600 hover:text-gray-800 font-semibold"
                     prefetch={false}
                   >
                     * {obj.title}
@@ -64,7 +64,7 @@ const Footer = ({ navBarData }: any) => {
                 <nav className="list-none mb-4" key={index}>
                   <Link
                     href={obj.slug}
-                    className="text-gray-600 hover:text-gray-800"
+                    className="text-gray-600 hover:text-gray-800 font-semibold"
                     prefetch={false}
                   >
                     * {obj.title}
