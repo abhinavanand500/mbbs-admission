@@ -82,9 +82,9 @@ function index() {
       <div className="sm:px-12 px-2 py-10">
         <div className="flex flex-wrap w-full mb-20">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-            <h1 className="sm:text-4xl text-2xl font-semibold title-font mb-2 text-blue-900">
+            <h2 className="sm:text-4xl text-2xl font-semibold title-font mb-2 text-blue-900">
               Most Popular Countries
-            </h1>
+            </h2>
             <div className="h-1 w-20 bg-blue-700 rounded"></div>
           </div>
           <p className="lg:w-1/2 w-full leading-relaxed text-gray-900">

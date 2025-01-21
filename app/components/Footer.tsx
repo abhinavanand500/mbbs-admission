@@ -15,13 +15,13 @@ const Footer = ({ navBarData }: any) => {
   const section4 = footerObject.navItems.slice(sectionSize * 3);
   return (
     <div>
-      <footer className="text-gray-600 body-font bg-gray-100 mt-40">
+      <footer className="text-gray-600 body-font bg-gray-100 mt-10">
         <div className="flex flex-col text-center w-full">
           <h2 className="sm:text-3xl text-2xl font-bold title-font mt-4 text-blue-800">
             Quick Links that might help
           </h2>
         </div>
-        <div className="container px-5 p-12 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        <div className="px-5 p-12 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
             {/* <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
               <Image src={logo} alt={""} height={60} width={60} />
