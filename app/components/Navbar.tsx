@@ -102,7 +102,7 @@ export default function Example({ navBarData }: any) {
                 </div>
                 <div
                   className="ml-4 flex lg:ml-0  mt-4"
-                  onClick={toggleDropdown}
+                  // onClick={toggleDropdown}
                 >
                   <Link href="/" prefetch={false}>
                     <span className="sr-only mt-10">Your Company</span>
@@ -320,7 +320,7 @@ export default function Example({ navBarData }: any) {
                 className=" rounded-md bg-white text-gray-400 lg:hidden"
                 onClick={toggleDropdown}
               >
-                <span className="absolute -inset-0.5" />
+                {/* <span className="absolute -inset-0.5" /> */}
                 <span className="sr-only">Open menu</span>
                 <Bars3Icon className="h-6 w-6 ml-4" aria-hidden="true" />
               </button>
