@@ -1,5 +1,4 @@
 {
   "/[blogRoutes]/page": "app/[blogRoutes]/page.js",
-  "/test-for-scholarship/page": "app/test-for-scholarship/page.js",
   "/page": "app/page.js"
 }

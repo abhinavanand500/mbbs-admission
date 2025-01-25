@@ -18,11 +18,11 @@ function TextSerializer({ data, className }) {
   const serializers = {
     types: {
       image: ({ value }) => (
-        <div className="flex justify-center my-10">
+        <div className="flex justify-center my-4">
           <Image
             src={urlFor(value).url()}
             height={500}
-            width={800}
+            width={900}
             className="block"
             alt="serializers"
           />

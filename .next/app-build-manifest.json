@@ -1,5 +1,11 @@
 {
   "pages": {
+    "/[blogRoutes]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/[blogRoutes]/page.css",
+      "static/chunks/app/[blogRoutes]/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -16,17 +22,6 @@
       "static/chunks/main-app.js",
       "static/css/app/page.css",
       "static/chunks/app/page.js"
-    ],
-    "/[blogRoutes]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/[blogRoutes]/page.css",
-      "static/chunks/app/[blogRoutes]/page.js"
-    ],
-    "/test-for-scholarship/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/test-for-scholarship/page.js"
     ]
   }
 }
