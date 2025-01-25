@@ -54,13 +54,25 @@ export default async function RootLayout({
             }),
           }}
         />
-        <link rel="canonical" href="https://yourwebsite.com" />
+        <link rel="canonical" href="https://www.mbbsadmissionsinabroad.com/" />
         <meta name="robots" content="index, follow" />
 
         {/* Hreflang Tags */}
-        <link rel="alternate" href="https://yourwebsite.com" hreflang="en" />
-        <link rel="alternate" href="https://yourwebsite.com/es" hreflang="es" />
-        <link rel="alternate" href="https://yourwebsite.com/fr" hreflang="fr" />
+        <link
+          rel="alternate"
+          href="https://www.mbbsadmissionsinabroad.com/"
+          hrefLang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://www.mbbsadmissionsinabroad.com//es"
+          hrefLang="es"
+        />
+        <link
+          rel="alternate"
+          href="https://www.mbbsadmissionsinabroad.com//fr"
+          hrefLang="fr"
+        />
 
         {/* Open Graph Meta Tags for Facebook and YouTube */}
         <meta property="og:type" content="website" />
@@ -78,7 +90,7 @@ export default async function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://yourwebsite.com/path-to-your-thumbnail.jpg"
+          content="https://www.mbbsadmissionsinabroad.com//path-to-your-thumbnail.jpg"
         />
         <meta
           property="og:image:alt"
@@ -99,7 +111,7 @@ export default async function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="https://yourwebsite.com/path-to-your-thumbnail.jpg"
+          content="https://www.mbbsadmissionsinabroad.com//path-to-your-thumbnail.jpg"
         />
         <meta
           name="twitter:image:alt"
