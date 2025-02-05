@@ -15,7 +15,7 @@ const Footer = ({ navBarData }: any) => {
   const section4 = footerObject.navItems.slice(sectionSize * 3);
   return (
     <div>
-      <footer className="text-gray-600 body-font bg-gray-100 mt-10">
+      <footer className="text-gray-600 body-font bg-gray-100">
         <div className="flex flex-col text-center w-full">
           <p className="sm:text-3xl text-2xl font-bold title-font mt-4 text-blue-800">
             Quick Links that might help

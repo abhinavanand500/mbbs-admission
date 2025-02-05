@@ -1,12 +1,6 @@
 {
-  "/admin/page": "app/admin/page.js",
-  "/_not-found": "app/_not-found.js",
-  "/Home/page": "app/Home/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/[blogRoutes]/page": "app/[blogRoutes]/page.js",
   "/contact/page": "app/contact/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js",
-  "/sitemap.xml/route": "app/sitemap.xml/route.js",
-  "/test-for-scholarship/page": "app/test-for-scholarship/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/[blogRoutes]/page": "app/[blogRoutes]/page.js"
 }

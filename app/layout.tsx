@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import { getNavbarData, getHomePageData } from "@/lib/getHomePageData";
 import "./globals.css";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -11,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "MBBS Admission in Abroad",
   description:
-    "MBBS Admission in Abroad, New-Lyf an Overseas Consultants in India. Study MBBS in Russia, Ukraine & Philippines at Low Cost from MCI Approved Universities.",
+    "MBBS Admission Abroad with New-Lyf Overseas Consultants. Study MBBS in Russia, Ukraine, or the Philippines at MCI-approved universities at low costs.",
 };
 
 export default async function RootLayout({
@@ -32,6 +33,18 @@ export default async function RootLayout({
         <meta
           property="og:description"
           content="Find the best MBBS admissions in top universities abroad."
+        />
+        <meta
+          name="ahrefs-site-verification"
+          content="22807d65778b510ff96fcf197a3b2e305768c3c37972f2ac7050e3c7dc571725"
+        />
+        <meta
+          name="google-site-verification"
+          content="yA8gYXl26PM93Ah-DTbs-lSmLhFolE91oq9mmWU6fvE"
+        />
+        <meta
+          name="google-site-verification"
+          content="q3PaxiZB_fbKGHiJuY6EKAd5Z2Egpt7ec4dkG5Hevrw"
         />
         <meta
           property="og:url"
@@ -205,6 +218,7 @@ export default async function RootLayout({
       </Head>
       <body className="dark:bg-[#1A1C29] bg-white">
         <Navbar navBarData={navBarData.result} />
+        <GoogleAnalytics GA_TRACKING_ID="G-YR4Q895Z3R" />
         <div className="mt-20">{children}</div>
         <Footer navBarData={navBarData.result} />
       </body>

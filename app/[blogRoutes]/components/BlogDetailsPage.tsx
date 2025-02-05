@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { urlFor } from "@/lib/client";
 import TextSerializer from "./TextSerializers";
+import Modal from "./Modal";
 import TOC from "./TOC";
 
 const BlogDetailsPage = (props: any) => {
@@ -30,6 +31,7 @@ const BlogDetailsPage = (props: any) => {
           className="serializerTitle mt-4"
         />
       </div>
+      <Modal />
     </div>
   );
 };

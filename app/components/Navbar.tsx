@@ -305,12 +305,15 @@ export default function Example({ navBarData }: any) {
 
       {/* Computer view */}
       <header className="fixed top-0 z-20 w-full bg-white mb-40">
-        <a
+        {/* <a
           className="flex h-10 items-center justify-center bg-blue-800 px-4 text-sm font-medium text-white sm:px-6 lg:px-8"
-          href="test-for-scholarship"
+          href="auth"
         >
           *Scholarship Test Link*
-        </a>
+        </a> */}
+        <p className="flex h-10 items-center justify-center bg-blue-800 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+          info@new-lyf.com
+        </p>
 
         <nav aria-label="Top" className="mx-auto max-w-full sm:px-6 lg:px-8">
           <div className="border-b border-gray-200">
